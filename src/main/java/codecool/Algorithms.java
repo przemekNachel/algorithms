@@ -4,16 +4,16 @@ public class Algorithms {
 
     public String reverseAString(String string) {
         char[] chars = string.toCharArray();
-        StringBuilder builder = new StringBuilder();
-        for (int i = chars.length - 1; i >= 0; i--) {
-            builder.append(chars[i]);
+        char temp;
+        for (int i = 0; i < (chars.length / 2); i++) {
+            temp = chars[i]; chars[i] = chars[chars.length - 1 - i]; chars[chars.length - 1 - i] = temp;
         }
-        return builder.toString();
+        return String.valueOf(chars);
     }
 
-    public int factorialize(int toFactorialize) {
-        int value = 1;
-        for (int i = 2; i <= toFactorialize; i++) {
+    public long factorialize(long toFactorialize) {
+        long value = 1;
+        for (long i = 2; i <= toFactorialize; i++) {
             value *= i;
         }
         return value;

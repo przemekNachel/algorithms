@@ -24,9 +24,9 @@ public class AlgorithmsTest {
 
     @Test
     public void test_factorializeNumber() {
-        int toFactorialize = 5;
+        long toFactorialize = 30;
 
-        int factorialized = algorithms.factorialize(toFactorialize);
+        long factorialized = algorithms.factorialize(toFactorialize);
 
         Assert.assertEquals(120, factorialized);
 
