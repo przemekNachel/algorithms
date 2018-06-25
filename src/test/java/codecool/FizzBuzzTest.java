@@ -42,10 +42,8 @@ public class FizzBuzzTest {
 
     @Test
     public void test_fizBuzz3() {
-        map.put(7, "Bum");
+        fizzBuzz.fizzBuzz(15, map);
 
-        fizzBuzz.fizzBuzz(7, map);
-
-        Assert.assertEquals("1 \n2 \n3 Fizz\n4 \n5 Buzz\n6 Fizz\n7 Bum\n", out.toString());
+        Assert.assertEquals("1 \n2 \n3 Fizz\n4 \n5 Buzz\n6 Fizz\n7 Bum\n8 \n9 Fizz\n10 Buzz\n11 \n12 Fizz\n13 \n14 Bum\n15 FizzBuzz\n", out.toString());
     }
 }

@@ -1,13 +1,11 @@
 package codecool;
 
-/**
- * Hello world!
- *
- */
-public class App 
+import java.util.HashMap;
+
+public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        new FizzBuzz().fizzBuzz(100, new HashMap<Integer, String>());
     }
 }
