@@ -48,4 +48,16 @@ public class HighestProductTest {
         int[] array = {-10,-10,9, 10};
         Assert.assertEquals(1000, highestProduct.get(array));
     }
+
+    @Test
+    public void test_7() {
+        int[] array = {-10,-10,9, 10, 9};
+        Assert.assertEquals(1000, highestProduct.get(array));
+    }
+
+    @Test
+    public void test_8() {
+        int[] array = {-8, -8, 9, 10, 9};
+        Assert.assertEquals(810, highestProduct.get(array));
+    }
 }
