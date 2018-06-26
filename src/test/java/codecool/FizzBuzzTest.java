@@ -14,12 +14,14 @@ public class FizzBuzzTest {
     private FizzBuzz fizzBuzz;
     private Map<Integer, String> map;
     private final ByteArrayOutputStream out = new ByteArrayOutputStream();
+    private final static String newLine = System.getProperty("line.separator");
 
     @Before
     public void setup() {
         fizzBuzz = new FizzBuzz();
         map = new HashMap<>();
         System.setOut(new PrintStream(out));
+        System.getProperty("line.separator");
     }
 
     @Test
@@ -28,7 +30,7 @@ public class FizzBuzzTest {
 
         fizzBuzz.fizzBuzz(4, map);
 
-        Assert.assertEquals("1 \n2 Parzysta\n3 Fizz\n4 Parzysta\n", out.toString());
+        Assert.assertEquals("1 " + newLine + "2 Parzysta" + newLine + "3 Fizz" + newLine + "4 Parzysta" + newLine + "", out.toString());
     }
 
     @Test
@@ -37,13 +39,13 @@ public class FizzBuzzTest {
 
         fizzBuzz.fizzBuzz(5, map);
 
-        Assert.assertEquals("1 \n2 \n3 Fizz\n4 Cztery\n5 Buzz\n", out.toString());
+        Assert.assertEquals("1 " + newLine + "2 " + newLine + "3 Fizz" + newLine + "4 Cztery" + newLine + "5 Buzz" + newLine + "", out.toString());
     }
 
     @Test
     public void test_fizBuzz3() {
         fizzBuzz.fizzBuzz(15, map);
 
-        Assert.assertEquals("1 \n2 \n3 Fizz\n4 \n5 Buzz\n6 Fizz\n7 Bum\n8 \n9 Fizz\n10 Buzz\n11 \n12 Fizz\n13 \n14 Bum\n15 FizzBuzz\n", out.toString());
+        Assert.assertEquals("1 " + newLine + "2 " + newLine + "3 Fizz" + newLine + "4 " + newLine + "5 Buzz" + newLine + "6 Fizz" + newLine + "7 Bum" + newLine + "8 " + newLine + "9 Fizz" + newLine + "10 Buzz" + newLine + "11 " + newLine + "12 Fizz" + newLine + "13 " + newLine + "14 Bum" + newLine + "15 FizzBuzz" + newLine + "", out.toString());
     }
 }

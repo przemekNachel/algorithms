@@ -24,7 +24,7 @@ public class AlgorithmsTest {
 
     @Test
     public void test_factorializeNumber() {
-        long toFactorialize = 30;
+        long toFactorialize = 5;
 
         long factorialized = algorithms.factorialize(toFactorialize);
 
