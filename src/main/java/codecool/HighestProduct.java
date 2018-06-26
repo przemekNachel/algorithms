@@ -13,7 +13,7 @@ public class HighestProduct {
             if(i <= min1) {
                 min2 = min1;
                 min1 = i;
-            } else if(i <= min2) {
+            } else if(i < min2) {
                 min2 = i;
             }
             if(i >= max1) {
@@ -23,7 +23,7 @@ public class HighestProduct {
             } else if (i >= max2) {
                 max3 = max2;
                 max2 = i;
-            } else if(i >= max3) {
+            } else if(i > max3) {
                 max3 = i;
             }
         }
