@@ -26,6 +26,12 @@ public class RomanConverterTest {
     }
 
     @Test
+    public void test_convert8() {
+        String result = romanConverter.toRoman(8);
+        Assert.assertEquals("VIII", result);
+    }
+
+    @Test
     public void test_convertV() {
         int result = romanConverter.toArabic("V");
         Assert.assertEquals(5, result);
@@ -35,5 +41,11 @@ public class RomanConverterTest {
     public void test_convertIX() {
         int result = romanConverter.toArabic("IX");
         Assert.assertEquals(9, result);
+    }
+
+    @Test
+    public void test_convertVIII() {
+        int result = romanConverter.toArabic("VIII");
+        Assert.assertEquals(8, result);
     }
 }

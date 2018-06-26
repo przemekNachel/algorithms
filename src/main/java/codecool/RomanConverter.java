@@ -35,8 +35,7 @@ public class RomanConverter {
         if (sign.equals("L")) return 50;
         if (sign.equals("X")) return 10;
         if (sign.equals("V")) return 5;
-        if (sign.equals("I")) return 1;
-        return 0;
+        else return 1;
     }
 
     public int toArabic(String roman) {
