@@ -15,6 +15,10 @@ public class AppTest
     @Test
     public void shouldAnswerWithTrue()
     {
-        assertTrue( true );
+        try {
+            App.main(new String[2]);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

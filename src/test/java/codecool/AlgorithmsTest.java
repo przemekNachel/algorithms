@@ -33,10 +33,17 @@ public class AlgorithmsTest {
     }
 
     @Test
-    public void test_checkPalindrome() {
+    public void test_checkPalindrome1() {
         String palindrome = "A man, a plan, a canal. Panama";
 
         Assert.assertTrue(algorithms.isPalindrome(palindrome));
+    }
+
+    @Test
+    public void test_checkPalindrome2() {
+        String palindrome = "Kinga";
+
+        Assert.assertFalse(algorithms.isPalindrome(palindrome));
     }
 
     @Test

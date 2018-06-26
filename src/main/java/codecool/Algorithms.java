@@ -4,9 +4,8 @@ public class Algorithms {
 
     public String reverseAString(String string) {
         char[] chars = string.toCharArray();
-        char temp;
         for (int i = 0; i < (chars.length / 2); i++) {
-            temp = chars[i]; chars[i] = chars[chars.length - 1 - i]; chars[chars.length - 1 - i] = temp;
+            char temp = chars[i]; chars[i] = chars[chars.length - 1 - i]; chars[chars.length - 1 - i] = temp;
         }
         return String.valueOf(chars);
     }
